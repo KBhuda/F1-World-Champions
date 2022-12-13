@@ -1,0 +1,24 @@
+<div class="seasons-wrapper">
+	<div class="seasons-box">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="seasons-content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1 class="seasons-title-header">Select a Season</h1>
+					<p class="seasons-title-text">Please select a Formula 1 Season for more details</p>
+				</div>
+				<div
+					class="card seasons-card col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+					*ngFor="let seasonItem of listOfSeasons; let i = index; trackBy: trackByFn;"
+					style="cursor: pointer;"
+					[routerLink]="[seasonItem.season]"
+					routerLinkActive="active"
+				>
+					<div class="card-body">
+						<h5 class="card-title">{{ seasonItem?.season }}</h5>
+						<a class="list-group-item clearfix">View Season</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

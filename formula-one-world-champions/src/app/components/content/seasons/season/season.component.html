@@ -1,0 +1,24 @@
+<div class="season-wrapper">
+	<div class="season-box">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="season-content col-xs-12 col-sm-12 col-md-10 col-lg-10">
+					<h1 class="season-title-header">{{ season }} Season</h1>
+					<p class="season-title-text">Champions:</p>
+					<div style="border: 1px solid black"></div>
+					<div class="row">
+						<p class="season-winner-text col-xs-12 col-sm-12 col-md-6 col-lg-6">Driver:
+							<strong>{{ driverWinner?.Driver?.givenName }} {{ driverWinner?.Driver?.familyName }}</strong>
+						</p>
+						<p class="season-title-text col-xs-12 col-sm-12 col-md-6 col-lg-6">Constructor:
+							<strong>{{ constructorWinner?.Constructor?.name }}</strong>
+						</p>
+					</div>
+					<div style="border: 1px solid black"></div>
+					<p class="season-title-text">Races:</p>
+					<app-races [seasonsRaces]="seasonsRaces"></app-races>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

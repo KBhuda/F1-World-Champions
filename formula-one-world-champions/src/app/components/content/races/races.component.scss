@@ -1,0 +1,11 @@
+@import '../../../../assets/scss/colours.scss';
+
+.list-group-item {
+	border: none;
+	border-top: 1px solid;
+}
+
+.active {
+	background-color: $primary;
+	z-index: auto;
+}

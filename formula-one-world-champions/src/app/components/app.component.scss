@@ -1,0 +1,43 @@
+@import '../../assets/scss/colours.scss';
+
+.background-container {
+	min-height: 100vh;
+	padding-bottom: 111px;
+	box-sizing: border-box;
+	position: relative;
+	margin: 0;
+	// padding: 0;
+	border: 0cm;
+
+	// background-image: url(../../assets/images/driver-zoom.jpg);
+	// background-size: cover;
+	// background-position: center;
+	// background-repeat: no-repeat;
+
+	// background-color: transparent;
+	// position: fixed;
+	width: 100%;
+	// height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	// z-index: 1;
+
+	.body-container {
+		margin: 0;
+		padding: 0;
+		border: 0cm;
+		bottom: 0;
+		min-width: 100%;
+		overflow-y: auto;
+		background-color: transparent;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		box-sizing: border-box;
+		// min-height: calc(100vh - 171px);
+		// height: 100%;
+	}
+}

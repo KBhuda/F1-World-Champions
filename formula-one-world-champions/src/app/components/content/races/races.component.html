@@ -1,0 +1,6 @@
+<li
+	class="list-group-item list-group-item-action col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"
+	*ngFor="let race of seasonsRaces; let i = index; trackBy: trackByFn;"
+>
+	<app-race [seasonRace]="race"></app-race>
+</li>

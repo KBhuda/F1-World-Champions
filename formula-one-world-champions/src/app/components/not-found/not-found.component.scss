@@ -1,0 +1,67 @@
+@import '../../../assets/scss/colours.scss';
+
+@font-face {
+	font-family: "Formula1-Bold";
+	src: local("Formula1-Bold"), url(../../../assets/fonts/Formula1-Bold.ttf);
+}
+
+.content-area {
+	height: 100%;
+	width: 100%;
+	background-image: url(../../../assets/images/crash.jpg);
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// z-index: -2;
+
+	.text-content {
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		top: 30%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		font-family: Formula1-Bold;
+
+		.title {
+			font-size: 10em;
+			color: $secondary;
+		}
+
+		.text-desc {
+			color: $secondary;
+
+			a {
+				font-size: 2em;
+				color: $primary;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+		}
+
+		@media (max-width: 1300px) {
+			top: 20%;
+
+			.title {
+				font-size: 5em;
+			}
+		}
+
+		@media (max-width: 992px) {
+			top: 20%;
+		}
+
+		@media (max-width: 768px) {
+			top: 20%;
+		}
+
+		@media (max-width: 576px) {
+			top: 30%;
+		}
+	}
+}

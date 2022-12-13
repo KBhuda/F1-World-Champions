@@ -1,0 +1,36 @@
+@import '../../../../assets/scss/colours.scss';
+
+.seasons-wrapper {
+	// height: 100%;
+	color: $tertiary;
+	position: absolute;
+	// top: 10%;
+	// bottom: 10%;
+	left: 0px;
+	right: 0px;
+	overflow: auto;
+
+	.seasons-box {
+		// position: absolute;
+		// height: 100%;
+		width: 100%;
+		transition: ease-in-out 0.4s;
+		padding: 1% 1% 1% 1%;
+
+		.row {
+			padding: 5px;
+			text-align: center;
+
+			.seasons-card {
+				padding: 5px;
+				margin: 5px;
+
+				.seasons-card-text {
+					color: $tertiary;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+}

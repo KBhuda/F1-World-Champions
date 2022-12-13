@@ -1,0 +1,71 @@
+@import '../../../assets/scss/colours.scss';
+
+@font-face {
+	font-family: "Formula1-Bold";
+	src: local("Formula1-Bold"), url(../../../assets/fonts/Formula1-Bold.ttf);
+}
+
+.content-area {
+	height: 100%;
+	width: 100%;
+	background-image: url(../../../assets/images/pit-stop.jpg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.text-content {
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		font-family: Formula1-Bold;
+
+		.title {
+			font-size: 5em;
+			color: $primary;
+		}
+
+		.text-desc {
+			color: $secondary;
+			font-size: 2em;
+		}
+
+		@media (max-width: 1300px) {
+			top: 40%;
+
+			.title {
+				font-size: 4em;
+			}
+
+			.text-desc {
+				font-size: 1.5em;
+			}
+		}
+
+		@media (max-width: 992px) {
+			top: 20%;
+		}
+
+		@media (max-width: 768px) {
+			top: 20%;
+
+			.text-desc {
+				font-size: 1em;
+			}
+		}
+
+		@media (max-width: 576px) {
+			top: 30%;
+
+			.title {
+				font-size: 2em;
+			}
+		}
+	}
+}

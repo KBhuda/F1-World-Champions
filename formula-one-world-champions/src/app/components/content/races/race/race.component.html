@@ -1,0 +1,12 @@
+<div [ngClass]="{ match: seasonChampionID === seasonRaceResult?.Driver?.driverId }">
+	<div class="d-flex w-100 justify-content-between">
+		<h6 class="mb-1 align-items-start">{{ seasonRace?.round }}. {{ seasonRace?.raceName }}</h6>
+		<small>{{ seasonRace?.Circuit?.circuitName }}</small>
+		<small class="mb-1 align-items-end">{{ seasonRace?.date | date: 'fullDate'}}</small>
+	</div>
+	<div class="d-flex w-100 justify-content-evenly">
+		<small class="mb-1 align-items-end">{{ seasonRaceResult?.Driver?.givenName }} {{ seasonRaceResult?.Driver?.familyName }}</small>
+		<small>Constructor: {{ seasonRaceResult?.Constructor?.name }}</small>
+		<small>Time: {{ seasonRaceResult?.Time?.time }}</small>
+	</div>
+</div>
