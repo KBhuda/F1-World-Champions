@@ -1,7 +1,7 @@
 import { Subscription } from 'rxjs';
 import { Races } from 'src/app/models/race.model';
-import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { SeasonService } from 'src/app/services/season/season.service';
 import { DriverStandings } from 'src/app/models/driver-standings.model';
 import { ConstructorStandings } from 'src/app/models/constructor-standings.model';
@@ -12,17 +12,15 @@ import { ConstructorStandings } from 'src/app/models/constructor-standings.model
 	styleUrls: ['./season.component.scss']
 })
 export class SeasonComponent implements OnInit, OnDestroy {
-	private seasonSubscription!: Subscription;
-	private driverChampionSubscription!: Subscription;
-	private constructorChampionSubscription!: Subscription;
-	private selectedSeasonsRace!: Races;
 	season: string = '2005';
 	seasonsRaces!: Races[];
 	driverWinner: DriverStandings;
 	constructorWinner: ConstructorStandings;
+	private seasonSubscription!: Subscription;
+	private driverChampionSubscription!: Subscription;
+	private constructorChampionSubscription!: Subscription;
 
 	constructor(private seasonSvc: SeasonService,
-		private router: Router,
 		private route: ActivatedRoute) {
 	}
 
@@ -43,7 +41,6 @@ export class SeasonComponent implements OnInit, OnDestroy {
 		this.driverChampionSubscription = this.seasonSvc.getSeasonWinnerDriver(this.season)
 			.subscribe(seasonDriverChamp => {
 				this.driverWinner = seasonDriverChamp.MRData.StandingsTable.StandingsLists[0].DriverStandings[0];
-				console.log(this.driverWinner?.Driver?.driverId);
 			});
 
 		// Get season winning Constructor info from Season service

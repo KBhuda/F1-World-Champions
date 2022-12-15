@@ -1,5 +1,5 @@
-import { Component, Input, OnDestroy, OnInit, TrackByFunction } from '@angular/core';
 import { Races } from 'src/app/models/race.model';
+import { Component, Input, OnDestroy, OnInit, TrackByFunction } from '@angular/core';
 
 @Component({
 	selector: 'app-races',

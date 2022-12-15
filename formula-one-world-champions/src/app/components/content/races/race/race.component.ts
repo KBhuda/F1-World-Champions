@@ -1,12 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { OnDestroy } from '@angular/core';
+import { Races } from 'src/app/models/race.model';
+import { Results } from 'src/app/models/results.model';
+import { Component, Input, OnInit } from '@angular/core';
 import { RaceService } from 'src/app/services/race/race.service';
 import { SeasonService } from 'src/app/services/season/season.service';
 import { DriverStandings } from 'src/app/models/driver-standings.model';
-import { Races } from 'src/app/models/race.model';
-import { Subscription } from 'rxjs';
-import { OnDestroy } from '@angular/core';
-import { Results } from 'src/app/models/results.model';
 
 @Component({
 	selector: 'app-race',
@@ -22,9 +21,7 @@ export class RaceComponent implements OnInit, OnDestroy {
 	private driverChampionSubscription!: Subscription;
 
 	constructor(private raceSvc: RaceService,
-		private seasonSvc: SeasonService,
-		private route: ActivatedRoute,
-		private router: Router) {
+		private seasonSvc: SeasonService) {
 	}
 
 	/**

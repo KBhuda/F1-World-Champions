@@ -1,8 +1,8 @@
-import { Component, OnDestroy, OnInit, TrackByFunction } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Season, Seasons } from 'src/app/models/season.model';
 import { SeasonService } from 'src/app/services/season/season.service';
+import { Component, OnDestroy, OnInit, TrackByFunction } from '@angular/core';
 
 @Component({
 	selector: 'app-seasons',

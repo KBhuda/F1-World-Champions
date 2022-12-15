@@ -1,26 +1,27 @@
 @import "../../../assets/scss/colours.scss";
 
 @font-face {
-	font-family: "Formula1-Regular";
-	src: local("Formula1-Regular"), url(../../../assets/fonts/Formula1-Regular.ttf);
-}
-
-@font-face {
 	font-family: "Formula1-Bold";
-	src: local("Formula1-Bold"), url(../../../assets/fonts/Formula1-Bold.ttf);
+	src: local("Formula1-Bold"), url(../../../assets/fonts/Formula1-Bold.ttf)
 }
 
 @font-face {
 	font-family: "Formula1-Italic";
-	src: local("Formula1-Italic"), url(../../../assets/fonts/Formula1-Italic.ttf);
+	src: local("Formula1-Italic"), url(../../../assets/fonts/Formula1-Italic.ttf)
 }
 
 .header-wrapper {
+	position: absolute;
+	height: 10%;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: $primary;
+
 	.header-container {
-		z-index: 999999;
 		transition: ease-in-out 0.3s;
 		position: relative;
-		// height: 100%;
 		width: 100%;
 		display: flex;
 		text-align: center;
@@ -28,7 +29,7 @@
 		padding: 20% 0% 0% 10%;
 
 		.header-title {
-			color: $secondary;
+			color: $secondary
 		}
 
 		.header-nav {
@@ -39,12 +40,12 @@
 				margin: 0;
 				padding: 0;
 				display: flex;
-				list-style: none;
+				list-style: none
 			}
 
 			li {
 				position: relative;
-				font-family: "Formula1-Italic";
+				font-family: "Formula1-Italic"
 			}
 
 			a {
@@ -55,22 +56,22 @@
 				font-size: 1rem;
 				color: $secondary;
 				white-space: nowrap;
-				transition: 0.3s;
+				transition: .3s
 			}
 
 			.active {
 				font-family: "Formula1-Bold";
-				text-decoration: overline;
+				text-decoration: overline
 			}
 
-			.navbar-active::before {
+			.navbar-active:before {
 				visibility: visible;
-				width: 25px;
+				width: 25px
 			}
 		}
 
 		h2 {
-			font-family: "Formula1-Bold";
+			font-family: "Formula1-Bold"
 		}
 
 		&.header-top {
@@ -79,128 +80,126 @@
 			left: 0;
 			top: 0;
 			right: 0;
-			background: $primary;
 
 			h2 {
 				font-size: 2rem;
-				margin-right: auto;
+				margin-right: auto
 			}
 
 			.header-container {
 				display: flex;
-				align-items: center;
+				align-items: center
 			}
 
 			.header-title {
-				padding: 0% 0% 0% 2%;
+				padding: 0 0 0 2%
 			}
 
 			.header-nav {
 				margin: 0;
-				padding: 0% 0% 0% 75%;
-				float: right;
+				padding: 0 0 0 75%;
+				float: right
 			}
 		}
 	}
 }
 
-@media (max-width: 2100px) {
+@media (max-width:2100px) {
 	.header-wrapper {
 		.header-container {
 			&.header-top {
 				.header-nav {
-					padding: 0% 0% 0% 70%;
+					padding: 0 0 0 70%
 				}
 			}
 		}
 	}
 }
 
-@media (max-width: 1800px) {
+@media (max-width:1800px) {
 	.header-wrapper {
 		.header-container {
 			&.header-top {
 				.header-nav {
-					padding: 0% 0% 0% 60%;
+					padding: 0 0 0 60%
 				}
 			}
 		}
 	}
 }
 
-@media (max-width: 1600px) {
+@media (max-width:1600px) {
 	.header-wrapper {
 		.header-container {
 			&.header-top {
 				.header-nav {
-					padding: 0% 0% 0% 50%;
+					padding: 0 0 0 50%
 				}
 			}
 		}
 	}
 }
 
-@media (max-width: 1300px) {
+@media (max-width:1300px) {
 	.header-wrapper {
 		.header-container {
-
 			.header-title {
-				width: 100%;
+				width: 100%
 			}
 
 			.header-nav {
-				display: none;
+				display: none
 			}
 
 			&.header-top {
 				padding: 1% 1% 0% 1%;
 
 				h2 {
-					font-size: 1.8rem;
+					font-size: 1.8rem
 				}
 
 				.header-nav {
-					padding: 0% 0% 0% 35%;
+					padding: 0 0 0 35%
 				}
 			}
 		}
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width:991px) {
 	.header-wrapper {
 		.header-container {
 			padding: 50% 10% 0 10%;
 
 			.header-title {
-				padding: 2% 0% 0 5%;
-				width: 100%;
+				padding: 2% 0 0 5%;
+				width: 100%
 			}
 
 			h2 {
-				font-size: 1.5rem;
+				font-size: 1.5rem
 			}
 
 			&.header-top {
-				padding: 1% 0% 0% 1%;
+				padding: 5% 0% 0% 1%;
 
 				h2 {
-					font-size: 1.5rem;
+					font-size: 1.5rem
 				}
 			}
 		}
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 	.header-wrapper {
 		.header-container {
 			&.header-top {
-				padding: 1% 0% 0% 0%;
+				padding: 5% 0% 0% 0%;
 				height: 60px;
 
 				h2 {
-					font-size: 1rem;
+					font-size: 1rem
 				}
 			}
 		}
